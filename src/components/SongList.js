@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+// Notice that 'c'onnect here is lower case
 
 class SongList extends Component {
   render() {
@@ -10,6 +11,7 @@ class SongList extends Component {
 }
 
 const mapStateToProps = (state) => {
+  // state above stands for all the data inside of Redux store
   return { songs: state.songs };
 };
 
