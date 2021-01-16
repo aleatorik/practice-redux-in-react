@@ -14,7 +14,7 @@ const selectedSongReducer = (selectedSong = null, action) => {
   if (action.type === "SONG_SELECTED") {
     return action.payload;
   }
-// 추가 타입이 있을 나중의 경우를 대비해서 if 조건문 
+  // 추가 타입이 있을 나중의 경우를 대비해서 if 조건문
   return selectedSong;
 };
 
@@ -22,3 +22,6 @@ export default combineReducers({
   songs: songsReducer,
   selectedSong: selectedSongReducer,
 });
+
+// 파일이름을 이처럼 index.js로 설정해주면 나중에 불러올 때 아래처럼 디렉토리 이름까지만 입력하여 불러올 수 있다.
+// import combineReducers from './reducers';
